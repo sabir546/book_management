@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/register_book.css">
+    <title>Document</title>
+</head>
+
+<body>
+   
+      <div id="page1">
+        <nav>
+            <a href="/">Home</a> 
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="/register_book" id="register"> Register book</a>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="/show_book">Show book</a>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="/about">About</a>
+          </nav>
+<hr>
+
+    <form action="/register_book" method="post">
+        <h1>REGESTER BOOK</h1>
+
+<br> 
+ <input name="id" type="number" placeholder="  Enter_id">
+<br> <br>
+  <input name="name" type="text" placeholder="  Book_name">
+<br> <br>
+ <input name="author" type="text" placeholder="  Author_name">
+
+<br> <br>
+ <textarea name="description" id="" cols="25" rows="5" placeholder="  Write description"></textarea>
+<br> <br>
+ <input name="pages" type="number" placeholder="  No of pages">
+<br> <br>
+  <input name="publication" type="text" placeholder="  Publication">
+<br> <br>
+ <input name="year" type="number" placeholder="  Year">
+<br> <br>
+ <input name="price" type="number" placeholder="  Price">
+ <br> <br>
+ 
+ <button>submit</button>
+    </form>
+
+</div>
+</body>
+</html>

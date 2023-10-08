@@ -1,0 +1,48 @@
+
+    
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  html,body{
+  height: 100%;
+  width: 100%; 
+  }
+  #page1{
+        /* align-items: center; */
+        min-height: 100vh;
+        width: 100%;
+        background-color: darkcyan;
+        
+        align-items: center;
+        justify-content: center; 
+    }
+#page1{
+    background-image: url(https://images.besttemplates.com/2544/OutSide.jpg);
+    background-size: cover;
+}
+  
+    nav{
+padding: 0px 30px;
+    height: 60px;
+    width: 100%;
+    background-color:lightsalmon ;
+    
+    display: flex;
+    align-items: center;
+justify-content: left;
+
+
+    }
+    h2{ 
+      padding: 150px;
+      font-size: 50px;
+      text-align: center;
+    }
+    #about{
+      color: red;
+      font-size: 18px;
+      text-decoration: underline black;
+    }
+

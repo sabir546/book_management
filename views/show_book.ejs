@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/show_book.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="page1">
+    <nav>
+        <a href="/">Home</a> 
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/register_book"> Register book</a>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/show_book" id="show">Show book</a>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/about">About</a>
+      </nav>
+     <hr>
+     <div id="content">
+      
+      <% book.forEach(function(ele,index){ %>
+        <br> 
+       
+       ( <%= index+1  %> ) BOOK ID:  <%= ele.id %>
+        <br> 
+
+      BOOK NAME:  <%= ele.name %>
+        <br>
+
+      AUTHOR NAME:  <%= ele.author %>
+        <br>
+
+      DESCRIPTION:  <%= ele.description %>
+      <br> <br> <br>
+    <a href="/details/<%= index %> " id="explore" >  explore more</a>
+<br> <br> <br>
+<hr>
+    <%  }) %>
+     <br>
+    </div>
+</div>
+
+</body>
+</html>

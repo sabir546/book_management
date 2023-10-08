@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/details.css">
+  <title>Document</title>
+</head>
+
+
+
+<body>
+  <div id="page1">
+
+
+    BOOK NAME : <%= book.name %>
+      <br> <br>
+      AUTHOR NAME : <%= book.author %>
+        <br> <br>
+        DESCRIPTION : <%= book.description %>
+          <br> <br>
+          NO OF PAGES : <%= book.pages %>
+            <br> <br>
+
+            PUBLICATION : <%= book.publication %>
+              <br> <br>
+
+              YEAR : <%= book.year %>
+                <br> <br>
+
+                PRIZE : <%= book.price %>
+                
+                  <br> <br> <br>
+                  <a href="/delete/<%=index %>">Delete</a>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a href="/update/<%= index %>">Update</a>
+
+  </div>
+</body>
+
+</html>

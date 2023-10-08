@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/update.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    
+    <div id="page1">
+        <nav>
+            <a href="/">Home</a> 
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="/register_book">Register book</a>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="/show_book">Show book</a>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="/about">About</a>
+          </nav>
+<hr>
+
+    <form action="/update/:index" method="post">
+        <h1>UPDATE BOOK</h1>
+<br> 
+ <input disabled value="<%= book.id %>" name="id" type="number" placeholder="  Enter_id">
+<br> <br>
+  <input value="<%= book.name %>" name="name" type="text" placeholder="  Book_name">
+<br> <br>
+ <input value="<%= book.author %>" name="author" type="text" placeholder="  Author_name">
+
+<br> <br>
+ <textarea  name="description" id="" cols="25" rows="5" placeholder="  Write description"><%= book.description %></textarea>
+<br> <br>
+ <input value="<%= book.pages %>" name="pages" type="number" placeholder="  No of pages">
+<br> <br>
+  <input value="<%= book.publication %>" name="publication" type="text" placeholder="  Publication">
+<br> <br>
+ <input value="<%= book.year %>" name="year" type="number" placeholder="  Year">
+<br> <br>
+ <input  value="<%= book.price %>" name="price" type="number" placeholder="  Price">
+<br>
+<br>
+ <button>update</button>
+    </form>
+
+</div>
+</body>
+</html>
