@@ -17,6 +17,9 @@
     background-image: url(https://i.pinimg.com/564x/9d/12/68/9d1268c2a7f10c3bdda37ece2a4f6289.jpg);
     background-size: cover;
   }
+  .content{
+    padding: 30px 30px;
+  }
 
   a {
     padding: 5px 10px;

@@ -12,8 +12,10 @@
 
 <body>
   <div id="page1">
-
-
+<div class="content">
+    
+Book id: <%= book.id %>
+<br> <br>
     BOOK NAME : <%= book.name %>
       <br> <br>
       AUTHOR NAME : <%= book.author %>
@@ -22,19 +24,17 @@
           <br> <br>
           NO OF PAGES : <%= book.pages %>
             <br> <br>
-
             PUBLICATION : <%= book.publication %>
               <br> <br>
-
               YEAR : <%= book.year %>
                 <br> <br>
-
                 PRIZE : <%= book.price %>
-                
                   <br> <br> <br>
-                  <a href="/delete/<%=index %>">Delete</a>
+                  <a href="/delete/<%= book._id %>">Delete</a>
                   &nbsp; &nbsp; &nbsp; &nbsp;
-                  <a href="/update/<%= index %>">Update</a>
+                  <a href="/update/<%= book._id %>">Update</a>
+
+                </div>
 
   </div>
 </body>

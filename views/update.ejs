@@ -23,7 +23,7 @@
           </nav>
 <hr>
 
-    <form action="/update/:index" method="post">
+    <form action="/update/<%= book._id%>" method="post">
         <h1>UPDATE BOOK</h1>
 <br> 
  <input disabled value="<%= book.id %>" name="id" type="number" placeholder="  Enter_id">

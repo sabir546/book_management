@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const database=require("../models/books")
 
-const book=[];
+// const book=[];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -18,43 +19,77 @@ router.get('/register_book', function(req, res, next) {
 });
 
 
-router.post('/register_book', function(req, res, next) {
-  book.push(req.body);
-  res.redirect("/show_book")
+router.post('/register_book',function(req, res, next) {
+  // book.push(req.body);
+  // res.redirect("/show_book")
+
+  database.create(req.body)
+  .then(()=>{
+    res.redirect('/show_book')
+  })
+  .catch((error)=>{
+    res.send(error)
+  })
   
 });
 
-// router.post('/register', function(req, res, next) {
-//   const data = req.body;
-//   res.render('register', { data : data })
+
+router.get('/show_book',async function(req, res, next) {
   
-// });
-router.get('/show_book', function(req, res, next) {
+  try{
+const book=await database.find()
   res.render('show_book',{book:book});
+  }
+  catch(error){
+    res.send(error)
+  }
+
 });
 
-router.get('/details/:index', function(req, res, next) {
-  const index= req.params.index;
-  const Books = book[index];
-  res.render('details',{book : Books, index:req.params.index  });
+router.get('/details/:id',async function(req, res, next) {
+  try{
+  const id= req.params.id;
+  // const Books = book[index];
+  const Books = await database.findById(id)
+  res.render('details',{book : Books });
+
+  }
+  catch(error){
+    res.send(error)
+  }
 });
  
-router.get('/delete/:index',function(req,res,next){
-  book.splice(req.params.index, 1)
-  res.redirect('/show_book');
+router.get('/delete/:id',async function(req,res,next){
+  try{
+    await database.findByIdAndDelete(req.params.id)
+    res.redirect('/show_book');
+  
+   }
+   catch(error){
+  res.send(error);
+   }
 
 })  
 
-router.get('/update/:index', function(req, res, next) {
-  const index= req.params.index;
-  const Books = book[index];
-  res.render('update',{book : Books, index:req.params.index  });
+router.get('/update/:id', async function(req, res, next) {
+ try{
+ const book= await database.findById(req.params.id)
+  res.render('update',{book:book});
+
+ }
+ catch(error){
+res.send(error);
+ }
 });
 
-router.post('/update/:index', function(req, res, next) {
-  book[req.params.index]=req.body;
-  res.redirect('/details/:index');
+router.post('/update/:id',async function(req, res, next) {
+  
+  try{
+    await database.findByIdAndUpdate(req.params.id,req.body)
+res.redirect(`/details/${req.params.id}`);
+  }
+  catch(error){
+    res.send(error);
+  }
 });
-
-
 module.exports = router;

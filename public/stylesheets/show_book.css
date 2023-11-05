@@ -9,22 +9,24 @@
     width: 100%; 
     }
     #page1{
-background-image: url(https://images.squarespace-cdn.com/content/v1/62a7eabb5208432deb18f818/b3b160f5-4901-4e2c-a88d-bcc7ab76dbec/image-asset.jpg?format=2500w);
-background-size: cover;
+      min-width:100%;
+      width: 100%;
+      color: yellow;
+      background-image: url(https://images.squarespace-cdn.com/content/v1/62a7eabb5208432deb18f818/b3b160f5-4901-4e2c-a88d-bcc7ab76dbec/image-asset.jpg?format=2500w);
+      background-size: cover;
     }
     #page1{
-        /* align-items: center; */
-        min-height: 100vh;
-        width: 100%;
-        color:rgb(206, 243, 25);
-        
-        
+      min-height:100%;
+      width: 100%;
     }
+   
+    #content{
+      padding: 20px 30px;
+       }
     a{
       color: white;
     }
     #explore{
-      
       font-size: 15px;
       border: 1px solid white;
       padding: 8px 10px;
